@@ -25,6 +25,8 @@ int main()
 }
 
 /*
+Limitation of this code
+
 Semantic definition of word, some special cases:
 
     link word: "cat-walk"
