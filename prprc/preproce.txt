@@ -1,0 +1,82 @@
+source code is stored in "filename.c"
+expanded code is in "filename.i"
+
+#define MACRO MACRO TEMPLATE <-- symbolic constants
+                                 do not appear in declarations
+
+# <-- begins in the start of the program is called pre processor
+      or directive
+#define <-- this directive can be flexible its use in program
+#define AND && - it can be used to define operation
+#define CONDIT (a > 25 AND 30 < a) - it can be used to define condition
+#define FOUND printf ( "The Yankee Doodle Virus" ); - even make statements 
+
+use /
+
+if the macro cant be debug then generate the source code file like "filename.c"
+its most likely the file can be found in "C:/vscode/bin" directory
+
+
+macro vs functions
+macro -->   replace the macro template into expanded file first 
+            in source code then give it to compiler
+size: depends on its use
+time: faster (Constants)
+
+//avoids overheads function call if its simple and short
+
+function --> call the arguments in fucntions
+             used it to return a value
+size: depend on its calls (the same as macro)
+time: differ in call stacks (most likely slow if its big code)
+
+//when large code and used often function is a must
+
+
+
+compiling condition using directives
+syntax
+#ifdef macroname
+#if macroname macro template
+
+#ifdef <-- if this macro name is defined compile this code only
+#ifndef <-- if not defined compile this code only
+#else <-- compile this code
+#endif <-- terminate the condition
+
+#if <-- use for condition that has been defined
+eg. if EXP == NEW compile the code (basic condition statemnts)
+#elseif <-- same as #if using condition statements
+
+miscellaneous directives
+
+#undef <-- will remove the macroname from system existence
+            similar to logical NOT (!) reversing the expression
+
+#pragrma <-- specify a function first before starting the main
+             and run a function before terminating the program
+             
+
+***IMPORTANT***
+no receive & return value
+
+void fun(1) & fun(2);
+
+      #pragrma startup fun(1) 
+      main() 
+      #pragrma exit fun(2)
+
+pragrma warn <-- suppress warning pop-ups
+                 useful kung gusto ay errors only
+                        '-' into '+' will flashed the warnings normally
+                        parang turn on(+) and off(-)
+            #pragma warn –rvl <-- return value 
+            #pragma warn –par <-- parameter not used
+            #pragma warn –rch <-- unreachable code 
+
+compile the code with "-Wno-unknown-programs"
+
+disabling pragma warnings
+            #pragma GCC diagnostic ignored "-Wunknown-pragmas" 
+
+madami pang pragma commands...
