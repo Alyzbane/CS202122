@@ -2,7 +2,7 @@
 
 int main()
 {
-   long t, b, n, ch;
+   int t = 0, b = 0, n = 0, ch;
    while((ch = getchar()) != EOF)
    { 
       if(ch == '\n')
@@ -13,9 +13,9 @@ int main()
         b++;
    }
 
-   printf("Newline: %ld\n", n);
-   printf("Tab: %ld\n", t);
-   printf("Blankspace: %ld\n", b);
+   printf("Newline: %d\n", n);
+   printf("Tab: %d\n", t);
+   printf("Blankspace: %d\n", b);
    
    return 0;
 }

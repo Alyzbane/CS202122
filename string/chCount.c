@@ -11,8 +11,8 @@ int main()
    // }
    // printf("Number of chars: %d\n", nc);
 
-   double nc;
-   for (nc = 0; getchar() != EOF; ++nc)
-      ;
+   double nc, c;
+   while ((c = getchar()) != EOF && c != '\n')
+      ++nc;
    printf("%.0f\n", nc);
 }
