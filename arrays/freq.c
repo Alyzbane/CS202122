@@ -28,6 +28,7 @@ int main()
       }
       else if (state == IN)
       {
+         ++ln;
       }
       else if (state == OUT)
       {
@@ -40,7 +41,7 @@ int main()
    // put the char
    printf("\nHistogram\n");
 
-   for (j = 0; j <= arr[n]; ++j)
+   for (j = 0; j <= ln; ++j)
    {
       printf("*");
    }
