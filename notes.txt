@@ -4,4 +4,6 @@ Regardless, where it come from an (library responsibility to put a stream)
 Text i/o <-- A text stream is a sequence of characters divided into lines; 
          each line consists of zero or  more characters
          followed by a newline character
-
+char <-- small integers is similar to the 
+         var and constants arithmetic ints
+         
