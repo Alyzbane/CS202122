@@ -18,8 +18,8 @@ int main()
          ++nwhite; // incr space tab newline
       else
          ++nother; //other inputs 
-         
-   printf("digits =");
+
+   printf("\ndigits =");
    for (i = 0; i < 10; ++i) //printing all the inputs
       printf(" %d", ndigit[i]);
    printf(", white space = %d, other = %d\n", nwhite, nother);
