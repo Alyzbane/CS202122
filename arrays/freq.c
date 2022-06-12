@@ -52,7 +52,7 @@ int main()
    
    putchar('\n');
    //
-   for (i = 0; i < MAXHIST; ++i)
+   for (i = 1; i < MAXWORD; ++i)
    {
       printf("%5d || %5d: ", i, wl[i]);
       if (wl[i] > 0)
