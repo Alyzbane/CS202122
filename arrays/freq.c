@@ -5,48 +5,39 @@ Character Frequency Histogram
 #include <stdio.h>
 #include <ctype.h>
 
-#define IN 1
-#define OUT 0
-#define ASCII 100
+#define IN 1 //inside word
+#define OUT 0 //outside word
+#define MAXHIST 15 //max length of history
+#define MAXWORD 10 //max length of word
 
-int main()
+int main ()
 {
-   int n, i, j, state, ln;
+   int c, numC, i, state;
+   int len, maxval, ovflow, wl[MAXWORD];
 
-   int arr[ASCII];
+   state = OUT; //declare  to be out of word
+   numC = 0; //number of character in word
+   ovflow = 0; //number of words >= MAXWORD
 
-   for (i = 0; i < ASCII; ++i)
-      arr[i] = 0; // fill the array
-
-   // ask for input
-   // init the size of 1 again to 0
-   while ((n = getchar()) != EOF)
+   //init the array
+   for(i = 0; i <= MAXWORD; ++i)
+      wl[i] = 0;  
+   
+   while((c = getchar()) != EOF)
    {
-      if (!isspace(n))
+      if(isspace) //the character encouter space, tabs, newlines
       {
-         state = OUT;
+         state = OUT; //exit the current wordlen
+         if(numC > 0 && numC < MAXWORD) //numC exceed 0
+            ++wl[numC];
+         else
+            ++ovflow;
+      numC = 0; //go back to 0 bc new wor
       }
-      else if (state == IN)
+      else if(state == OUT) //new word has been encountered
       {
-         ++ln;
-      }
-      else if (state == OUT)
-      {
-         ++arr[n];
-         ln++;
          state = IN;
+         
       }
-      
    }
-   // put the char
-   printf("\nHistogram\n");
-
-   for (j = 0; j <= ln; ++j)
-   {
-      printf("*");
-   }
-   // increment if char is identical
-
-   // end of the program
-   return 0;
 }
