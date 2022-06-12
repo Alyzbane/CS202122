@@ -57,8 +57,7 @@ int main()
       printf("%5d || %5d: ", i, wl[i]);
       if (wl[i] > 0)
       {
-         len = wl[i] * MAXHIST / maxval;
-         if (len <= 0)
+         if ((len = wl[i] * MAXHIST / maxval )<= 0)
             len = 1;
          else
             len = 0;
