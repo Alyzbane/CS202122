@@ -1,30 +1,11 @@
 #include <stdio.h>
 
 #define ALLOCSIZE 1000 //size of available space
+
 char *alloc (int );
 void afree (char *);
-int strelen (char *s);
 static char allocbuf[ALLOCSIZE]; //storage for alloc
 static char *allocp = allocbuf; //next free position
-int main()
-{
-	int c;
-	char a = 'a'; 
-
-	afree(&a);
-	alloc(a);
-	printf("A %c : %u", a, &a);
-	printf("\nALLOCp %d : %u", *allocp, &allocp); 
-	printf("\nALLOCbuf %d : %u", allocbuf[0], &allocbuf); 
-	printf("\nALLOCsize %d : %u", ALLOCSIZE, ALLOCSIZE); 
-
-	c = strelen(&a);	
-	printf("\nLength %d : %u", c, &c);
-	printf("\nALLOCbuf %d : %u", allocbuf[0], &allocbuf); 
-	printf("\nALLOCsize %d : %u", ALLOCSIZE, ALLOCSIZE); 
-
-
-}
 
 int strelen (char *s)
 {
