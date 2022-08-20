@@ -55,6 +55,7 @@ miscellaneous directives
 
 #pragrma <-- specify a function first before starting the main
              and run a function before terminating the program
+
              
 
 ***IMPORTANT***

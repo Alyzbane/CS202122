@@ -1,0 +1,7 @@
+**Predefined Identifier**
+
+__func__ <-- act as returning the function name being use
+
+Declarations using macros
+#define START_FUNC() printf("Using function %s\n", __func__)
+#define RETURN_FUNC() printf("Exiting function %s\n", __func__)
