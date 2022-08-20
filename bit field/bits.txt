@@ -1,0 +1,40 @@
+Terms
+masking = removing the desired parts and keeping only the sepcific parts
+
+Counting from hex
+hex	dec
+0	0
+1	1
+2	2
+3	3
+4	4
+5	5
+6	6
+7	7
+8	8
+9	9
+A	10
+B	11
+C	12
+D	13
+E	14
+F	15
+for every end of F start from 10 then repeat where the end of 10 left off
+10 = 16
+20 = 31
+...
+
+Bitwise operators by heirarchy
+Complement ~
+AND &
+XOR (exclusive or) ^
+OR (inclusive or) |
+
+
+
+Bit Fields
+Bit manipulation
+storing 2 bits only for this variable a
+a can only accept 1 -3 value since it's init with 2 bits only
+you can try masking it
+
