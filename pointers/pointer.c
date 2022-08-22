@@ -13,4 +13,8 @@ ptr++;    // Pointer moves to the next int position (as if it was an array)
 *(ptr)++; // Pointer moves to the next int position (as if it was an array). But returns the old content
 *++ptr;   // Pointer moves to the next int position, and then get's accessed, with your code, segfault
 *(++ptr); // Pointer moves to the next int position, and then get's accessed, with your code, segfault
+
+ char *arg[] = {"name", "hello"};
+
+ printf("%s", arg[1]);
 }

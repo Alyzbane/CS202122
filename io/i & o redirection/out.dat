@@ -1,0 +1,6 @@
+Fopen input: Hello, World!
+Use < to represent stdin stream as file
+Input Redirection: filename <file.x
+Use > to represent the data in stdin into stdout file
+Output Redirection: filename >file.x
+Nyanpansu!!

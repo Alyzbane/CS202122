@@ -32,8 +32,9 @@ int main()
 //reading the lines if it can still allocated through specific length
 int readlines (char *lineptr[], int nlines)
 {
-	int len, nline = 0;
+	int len, nline;
 	char *p, line[MAXLEN];
+	nline = 0;
 	while(len = getline(line, MAXLEN) > 0)
 	{
 		if(nline >= MAXLINES || (p = alloc(len)) == NULL)
@@ -72,7 +73,6 @@ int getline (char *rLine, int lim)
 //printing the lines
 void writelines (char *lineptr[], int nlines)
 {
-	int i;
-	for(i = 0; i < nlines; i++)
-		printf("%s\n", lineptr[i]);
+	while(nline-- > 0)
+		printf("%s\n", *lineptr++);
 }
